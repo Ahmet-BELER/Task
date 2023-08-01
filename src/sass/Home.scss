@@ -1,0 +1,134 @@
+
+
+.app {
+    display: flex;
+    background-color: #e3dede;
+  }
+  
+  .filter-panel {
+    width: 18%; 
+    background-color: #e4dddd;
+    padding: 20px;
+    box-sizing: border-box;
+    border-color: #234e77;
+    margin-top: 40px;
+   
+  
+    
+  }
+  
+  .product-list {
+    width: 80%;
+    background-color: #ffffff;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-right: 20px;
+    margin-top: 40px;
+    
+
+    
+
+    
+  }
+  .input{
+    border-radius: 20px;
+    height: 20px;
+    width: 98%;
+    border-color: #c7d4e0;
+    padding: 10px;
+
+
+  }
+  // FilterCategories.scss
+
+.filter-categories {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  height: 100%;
+
+
+  .filter-button {
+    padding: 8px 16px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #f0f0f0;
+    }
+
+    &.active {
+      background-color: #007bff;
+      color: #fff;
+      border-color: #007bff;
+
+      &:hover {
+        background-color: #0056b3;
+      }
+    }
+  }
+}
+
+
+.sort-filter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.sort-buttons button {
+  background-color: transparent;
+  border: 1px solid #b0aaaa;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-right:3px;
+  &:hover {
+    background-color: #e0e0e0;
+  }
+}
+
+.sort-buttons-active {
+ 
+  background: linear-gradient(45deg, #c13584, #e1306c);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+
+
+
+  .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+   
+  
+    button {
+      background-color: #3498db;
+      color: #fff;
+      border: none;
+      padding: 8px 12px;
+      margin: 0 4px;
+      cursor: pointer;
+      border-radius: 4px;
+      font-size: 14px;
+      transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+  
+      &:hover {
+        background-color: #2980b9;
+      }
+  
+      &.active {
+        background-color: #e74c3c;
+        transform: scale(1.1); 
+      }
+    }
+  }
+  
