@@ -1,0 +1,19 @@
+@charset "UTF-8";
+ul {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  /* Öğeleri dikey eksende hizala */ }
+
+.price {
+  margin-left: 10px;
+  color: #467e2c;
+  font-size: 22px; }
+
+.product-info {
+  display: flex;
+  flex-direction: row; }
+
+.total {
+  color: #467e2c; }

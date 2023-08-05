@@ -9,31 +9,29 @@
     max-width: 100%;
     height: auto; }
 
-.two {
+.sepet {
+  background-color: #e3dede;
   display: flex;
   margin-right: 30px;
   justify-content: flex-end; }
 
-.sepet {
+.two {
   display: flex;
-  justify-content: flex-end;
-  margin-right: 40px; }
+  justify-content: flex-end; }
 
 .sepet_cover {
   background-color: #ffffff;
-  display: flex; }
+  display: flex;
+  align-items: center;
+  /* Yatayda ve dikeyde hizala */
+  position: relative; }
 
 .sepet_Length {
-  display: flex;
   text-decoration: none;
   outline: none;
   font-weight: bold;
-  color: white;
-  text-align: center;
-  border-radius: 20px;
-  background-color: blueviolet;
-  width: 25px;
-  align-items: center;
-  /* Dikeyde ortala */
-  justify-content: center;
-  display: flex; }
+  color: blue;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 30px;
+  position: absolute; }

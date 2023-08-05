@@ -1,13 +1,15 @@
 import axios from "axios";
-import {createSlice , createAsyncSlice, createAsyncThunk } from "@reduxjs/toolkit"
+import {createSlice , createAsyncThunk } from "@reduxjs/toolkit"
+
 
 
 const initialState = {
-
     products : [],
     selectedProduct :[],
-
+    sepetProducts : [],
 }
+
+
 
 
 export const fetchProducts = createAsyncThunk("fetchProducts", async (params) => {  
@@ -25,7 +27,15 @@ export const fetchProducts = createAsyncThunk("fetchProducts", async (params) =>
     reducers:{
         setSelectedProduct(state,actions) {
             state.selectedApplication = actions?.payload
-        }
+        },
+        addToSepet(state,actions) {
+            state.sepetProducts.push(actions?.payload)
+        },
+        removeToSepet(state,actions) {
+            state.sepetProducts = state.sepetProducts.filter(
+                (product) => product.id !== actions.payload
+            )
+         }
     },
 
     extraReducers:(builder) => {
@@ -34,7 +44,8 @@ export const fetchProducts = createAsyncThunk("fetchProducts", async (params) =>
             state.loading = true
         })
 
-        builder.addCase(fetchProducts.fulfilled, (state, actions)=>{
+        builder.addCase(fetchProducts.fulfilled, (state, actions)=>{ 
+
             state.products = actions?.payload
             state.loading=false
 
@@ -54,6 +65,6 @@ export const fetchProducts = createAsyncThunk("fetchProducts", async (params) =>
  })
 
 
-export const {fetchAcceptedproducts, setSelectedProduct} = productsSlice.actions
+export const {fetchAcceptedproducts, setSelectedProduct,addToSepet,removeToSepet} = productsSlice.actions
 
 export default productsSlice.reducer

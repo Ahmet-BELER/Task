@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 import Card from "../components/card/card";
-
+import { Link } from "react-router-dom"
 import "../css/Home.css";
+
+
 
 const Home = () => {
   const { products } = useSelector((state) => state.products);
@@ -159,6 +161,7 @@ const Home = () => {
             onChange={handleRatingChange}
           />
         </div>
+
 </div>
         <div>
           {currentItems.map((item) => (

@@ -1,14 +1,51 @@
-// header.scss
+.top {
+  background-color: #e3dede;
+}
 
 .header {
   background-color: #e3dede;
   padding: 10px;
   text-align: left;
 
-  
-    img {
-      max-width: 100%;
-      height: auto;
-    }
+  img {
+    max-width: 100%;
+    height: auto;
   }
-  
+}
+.two{
+  display: flex;
+  margin-right: 30px;
+  justify-content: flex-end;
+}
+.sepet {
+
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 40px;
+
+ 
+}
+
+.sepet_cover {
+  background-color: #ffffff;
+  display: flex;
+
+}
+
+.sepet_Length {
+  display: flex;
+  text-decoration: none;
+  outline: none;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  border-radius: 20px;
+  background-color: blueviolet;
+  width: 25px;
+    align-items: center; /* Dikeyde ortala */
+  justify-content: center;
+  display: flex;
+
+
+
+}

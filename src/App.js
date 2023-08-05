@@ -6,7 +6,7 @@ import {fetchProducts} from './redux/slices/productsSlice'
 import Home from './pages/Home';
 import Detail from './pages/Detail';
 import Layout from '../src/components/layout';
-
+import Sepet from "./pages/Sepet"
 
 
 function App() {
@@ -25,6 +25,7 @@ function App() {
     <Router>
       <Routes>
         <Route path='/' exact element={<Layout><Home/></Layout> } />
+        <Route path='/sepet' exact element={<Layout><Sepet/></Layout>} />
         <Route path='/item/:id' exact element={<Layout><Detail/></Layout>} />
       </Routes>
     </Router>

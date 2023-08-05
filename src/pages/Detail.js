@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector,useDispatch } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import RelatedCard from '../components/relatedCard';
 import '../css/DetailPage.css';
 import Slider from "react-slick";
+import  { addToSepet } from "../redux/slices/productsSlice"
+
 
 export default function Detail() {
   const { id } = useParams();
@@ -23,6 +25,9 @@ export default function Detail() {
   const limitedRelatedProducts = relatedProducts.slice(0, 5);
 
   console.log("relatedProducts", relatedProducts);
+
+
+  const dispatch = useDispatch()
 
 
   var settings = {
@@ -61,6 +66,12 @@ export default function Detail() {
     ],
   };
 
+  const handleAddToCart = () => {
+    dispatch(addToSepet(item)); 
+    
+    alert('Ürün sepete eklendi.');
+  };
+
 
 
   return (
@@ -79,7 +90,9 @@ export default function Detail() {
             <p className="cardDetail__category">Category: {item.category}</p>
             <p className="cardDetail__rate">Rate: {item.rating.rate}</p>
             <p className="cardDetail__price">{item.price}$</p>
-            <button className="cardDetail__sepet">Sepete Ekle</button>
+            <button className="cardDetail__sepet" onClick={handleAddToCart}>
+              Sepete Ekle
+            </button>
           </div>
 
           <div className="cardDetail__relating">
