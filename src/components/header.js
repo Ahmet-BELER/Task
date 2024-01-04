@@ -17,13 +17,15 @@ export default function Header() {
       <div className="two">
       <div className="sepet_Length"> {sepetProducts.length}</div>
       </div>
-        <Link to={`/sepet`}>
+        
           <div className="sepet">
             <div className="sepet_cover">
+            <Link to={`/sepet`}>
               <img src={"/image/shopping.png"} className="icon" alt="whatsap"  />
+              </Link>
             </div>
           </div>
-        </Link>
+      
       </div>
 
   );
